@@ -126,3 +126,8 @@ margin-top: 0.75rem;
 .label1::placeholder, .label2::placeholder {
     color: #555555; 
 }
+
+.socialmedia-container{
+    display: flex;
+   
+}

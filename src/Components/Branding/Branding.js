@@ -9,13 +9,38 @@ import BrandImage5 from "../../Assets/image 7 (Traced).png"
 
 
 function Branding(){
+
+
+    let brandimage=[
+        { 
+             image:BrandImage1
+        },
+        {
+            image:BrandImage2
+        },
+        {
+            image:BrandImage3
+        },
+        {
+            image:BrandImage4
+        },
+        {
+            image:BrandImage5
+        }
+        
+        
+        ]
     return(
 <section className="branding-container">
-   <div><img  src={BrandImage1} alt="img"/></div> 
-    <div><img src={BrandImage2} alt="img"/></div>
-    <div><img  src={BrandImage3} alt="img"/></div>
-   <div> <img  src={BrandImage4}alt="img"/></div>
-   <div><img  src={BrandImage5} alt="img"/></div> 
+  {
+brandimage.map((item)=>(
+
+
+    <div><img  src={item.image} alt="img"/></div> 
+))
+
+  }
+    
 </section>
 
     );

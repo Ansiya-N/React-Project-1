@@ -8,6 +8,23 @@ import behance from "../../Assets/behance.png";
 
 
 function Footer(){
+
+    let footer=[{
+        image:discord
+    },
+    {
+        image:facebook
+    },
+    {
+        image:dribbble
+    },
+    {
+        image:nstagram
+    },
+    {
+        image:behance
+    }
+]
 return(
 
 <section className="footer">
@@ -16,12 +33,17 @@ return(
 
     <div className="footer-content-left">
 <p className="footer-desc">This is a template Figma file, turned into code using Anima. Learn<br/> more at AnimaApp.com This is a template Figma file, turned into<br/> code using Anima. Learn more at AnimaApp.com</p>
-<div className="social">
-    <img src={discord} alt="img"/>
-    <img src={facebook} alt="img"/>
-    <img src={dribbble} alt="img"/>
-    <img src={nstagram} alt="img"/>
-    <img src={behance} alt="img"/>
+<div className="socialmedia-container">
+
+{
+    footer.map((item)=>(
+
+        <div className="social">
+    <img src={item.image} alt="img"/>
+   
+</div>
+    ))
+}
 </div>
 </div>
 <div className="form">

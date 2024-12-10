@@ -120,3 +120,8 @@ height: 1.875rem;
         
     
     }
+
+    .display-star{
+        display: flex;
+       gap:5px;
+    }
