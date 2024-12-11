@@ -1,5 +1,6 @@
 import React from "react";
-import "./Header.css"
+import "./Header.css";
+import{NavLink} from "react-router-dom"
 
 function Header(){
 
@@ -7,17 +8,17 @@ function Header(){
 {
     id:1,
     name:"About",
-   value:""
+   value:"/about"
 },
 {
     id:2,
     name:"Work",
-   value:""
+   value:"/work"
 },
 {
     id:3,
     name:"Contact",
-   value:""
+   value:"/contact"
 }
   
 
@@ -29,12 +30,15 @@ function Header(){
     return(
         <section className="header-section">
         <div className="logo">
-            Logo
+        <NavLink to="/home" className="logo-style">Logo</NavLink>
         </div>
         <div className="navbar">
             {header.map((item)=>(
 
-                <div className="header">{item.name}</div>
+               <div >
+                <NavLink to={item.value} className="header">{item.name}</NavLink>
+                
+                </div>
             ))}
         </div>
         </section>

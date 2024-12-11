@@ -42,11 +42,8 @@ table {
 	border-spacing: 0;
 }
 
-
-
-
-.main{
-   
-   
-    background-color:#FFFFFF
+.home-container{
+	position: relative;
 }
+
+

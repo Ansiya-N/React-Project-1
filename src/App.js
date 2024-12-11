@@ -1,23 +1,26 @@
 
 import './App.css';
-import Branding from './Components/Branding/Branding';
+import {BrowserRouter, Routes,Route, Navigate} from "react-router-dom"
 import Header from './Components/Header/Header';
-import ThreeCardSection from './Components/Three-Card-Section/Three-Card-Section';
-import HomeBanner from "./Components/HomeBanner/HomeBanner";
-import LatestWork from './Components/Latest-Work/Latest-Work'; 
-import Testimonial from './Components/Testimonial/Testimonial';
-import Footer from './Components/Footer/Footer';
+import Home from './Pages/Home';
+import Contact from './Pages/Contact';
+import Work from './Pages/Work';
+import About from './Pages/About';
+
 function App() {
   return (
-     <div className='main'>
-   <Header/>
-   <HomeBanner/>
-   <Branding/>
-   <ThreeCardSection/>
-   <LatestWork/>
-   <Testimonial/>
-   <Footer/>
-   </div>
+    <BrowserRouter>
+    <Header/>
+    <Routes>
+      <Route path="*" element={<Navigate to="/home"/>}/>
+      <Route path="/home" element={<Home/>}/>
+      <Route path="/about" element={<About/>}/>
+      <Route path="/contact" element={<Contact/>}/>
+      <Route path="/work" element={<Work/>}/>
+
+      
+    </Routes>
+    </BrowserRouter>
   );
 }
 

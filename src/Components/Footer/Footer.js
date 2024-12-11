@@ -33,15 +33,15 @@ return(
 
     <div className="footer-content-left">
 <p className="footer-desc">This is a template Figma file, turned into code using Anima. Learn<br/> more at AnimaApp.com This is a template Figma file, turned into<br/> code using Anima. Learn more at AnimaApp.com</p>
-<div className="socialmedia-container">
+<div className="social">
 
 {
     footer.map((item)=>(
 
-        <div className="social">
+       
     <img src={item.image} alt="img"/>
    
-</div>
+
     ))
 }
 </div>
