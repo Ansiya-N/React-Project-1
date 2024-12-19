@@ -1,33 +1,46 @@
-import React from "react";
+import React,{useContext} from "react";
 import "./Footer.css"
 import discord from "../../Assets/discord.png";
 import facebook from "../../Assets/facebook.png";
 import dribbble from "../../Assets/dribbble.png";
 import nstagram from "../../Assets/nstagram.png";
 import behance from "../../Assets/behance.png";
+import discordwhite from "../../Assets/discord-white.png"
+import facebookwhite from "../../Assets/facebook-white.png"
+import dribblewhite from "../../Assets/dribbble-white.png"
+import nstagramwhite from "../../Assets/nstagram-white.png"
+import behancewhite from "../../Assets/behance-white.png"
 
+import { ThemeContext } from '../../ThemeContext'
 
 function Footer(){
+    const darktheme=useContext(ThemeContext)
+       
 
     let footer=[{
-        image:discord
+        whiteimage:discord,
+        darkimage:discordwhite
     },
     {
-        image:facebook
+        whiteimage:facebook,
+        darkimage:facebookwhite
     },
     {
-        image:dribbble
+        whiteimage:dribbble,
+        darkimage:dribblewhite
     },
     {
-        image:nstagram
+        whiteimage:nstagram,
+        darkimage:nstagramwhite
     },
     {
-        image:behance
+        whiteimage:behance,
+        darkimage:behancewhite
     }
 ]
 return(
 
-<section className="footer">
+<section className={`footer ${darktheme?"dark-grey":""}`}>
 <div className="footer-heading">Lets work together</div>
 <div className="footer-content">
 
@@ -39,7 +52,7 @@ return(
     footer.map((item)=>(
 
        
-    <img src={item.image} alt="img"/>
+    <img src={`${darktheme?item.darkimage:item.whiteimage} `} alt="img"/>
    
 
     ))

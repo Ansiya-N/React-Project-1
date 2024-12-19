@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useContext} from "react";
 import "./Latest-Work.css";
 import LatestWorkImage1 from "../../Assets/Image.png";
 import LatestWorkImage2 from "../../Assets/Image (1).png";
@@ -6,9 +6,11 @@ import LatestWorkImage3 from "../../Assets/Image (2).png";
 import LatestWorkImage4 from "../../Assets/Image (3).png";
 import LatestWorkImage5 from "../../Assets/Image (4).png";
 import LatestWorkImage6 from "../../Assets/Image (5).png";
-
+import { ThemeContext } from '../../ThemeContext';
 
 function LatestWork(){
+     const darktheme=useContext(ThemeContext)
+           
     let latestwork=[
         {image:LatestWorkImage1,
             heading:"Community Connector",
@@ -37,9 +39,9 @@ function LatestWork(){
         }
     ]
     return(
-<section>
+<section className={`latestwork-container ${darktheme?"dark-grey":""}`}>
     <h1 className="latestworkheading">Latest work</h1>
-    <div className="latestworkcontents">
+    <div className={`latestworkcontents ${darktheme?"dark-grey":""}`}>
 
 
         {

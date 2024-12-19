@@ -1,10 +1,12 @@
-import React from "react";
+import React,{useContext} from "react";
 import "./Three-Card-Section.css";
 import ProductDesign from "../../Assets/Skills Card Icon.png"
 import VisualDesign from "../../Assets/Skills Card Icon (1).png"
-import ArtDirection from "../../Assets/Skills Card.png"
+import ArtDirection from "../../Assets/Skills Card.png";
+import { ThemeContext } from '../../ThemeContext'
 function ThreeCardSection(){
-
+ const darktheme=useContext(ThemeContext)
+        
     let cardsection=[
 
 
@@ -27,16 +29,16 @@ function ThreeCardSection(){
     ]
     return(
         
-
-        <section className="threecardsection">
+<div className={`cardsectioncontainer ${darktheme?"dark":""}`}>
+        <section className={`threecardsection ${darktheme?"dark":""}`}>
    {cardsection.map((item)=>(
 
 
-    <div className="cardsection-1">
+    <div className={`cardsection-1 ${darktheme?"dark-grey":""}`}>
         
         <div><img src={item.image} alt="img"/></div>
-        <div className="cardsection-2">{item.heading}</div>
-        <div className="cardsection-3">{item.desc}</div>
+        <div className={`cardsection-2 ${darktheme?"dark-grey":""}`}>{item.heading}</div>
+        <div className={`cardsection-3 ${darktheme?"dark-grey":""}`}>{item.desc}</div>
 
     </div>
    ))
@@ -44,6 +46,7 @@ function ThreeCardSection(){
 }
     
 </section>
+</div>
     );
 
     

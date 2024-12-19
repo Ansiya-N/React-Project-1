@@ -47,15 +47,12 @@ table {
 
 .testimonial-container{
    
+   margin-top: 42px;
    
-    margin-top: 2.625rem;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-    margin-top: 2.625rem;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(2,1fr);
-    gap: 1.5rem;
+    gap: 24px;
 }
 .testimonial-content{
     font-family: 'Epilogue', sans-serif;
@@ -70,7 +67,7 @@ table {
 .testimonial{
     display: flex;
     flex-direction: column;
-    padding: 2.625rem 2.625rem 2.625rem 2.625rem;
+    padding: 42px;
     background-color: #F3F3F3;
    gap:4.625rem;
 
@@ -115,7 +112,7 @@ height: 1.875rem;
         font-size: 2rem;
         font-weight: 600;
         line-height: 2.625rem;
-        padding-top: 2.625rem;
+        
         
         
     
@@ -123,5 +120,12 @@ height: 1.875rem;
 
     .display-star{
         display: flex;
-       gap:5px;
+       gap:6px;
     }
+.testimonial-main-container{
+    padding: 42px 24px;
+}
+.dark-grey{
+    background-color: grey;
+    color: white;
+  }
