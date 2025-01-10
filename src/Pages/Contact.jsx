@@ -7,7 +7,7 @@ function Contact() {
   
   /*const formRef=useRef();
   console.log (formRef.current?.firstChild?.firstChild?.value,"hlo")*/
- const [formData,setFormData]=useState({name:"",email:"",phone:"",msg:""})
+ const [formData,setFormData]=useState({name:"",email:"",phone:"",msg:""});
   function handleChange(e){
     setFormData({...formData,[e.target.name]:e.target.value})
   }
@@ -15,6 +15,7 @@ function Contact() {
     e.preventDefault();
     console.log(formData)
   }
+
   return (
 <>
     <div className="formcontainer1">
